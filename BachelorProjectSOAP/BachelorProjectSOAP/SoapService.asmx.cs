@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 using BachelorProjectBackend.Models;
+using BachelorProjectBackend.Repository;
 
 
 namespace BachelorProjectSOAP
@@ -16,191 +17,263 @@ namespace BachelorProjectSOAP
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
      [System.Web.Script.Services.ScriptService]
-    public class SoapService : System.Web.Services.WebService
+    public class SoapService : WebService
     {
-        //Mongo funktioner
+        //Mongo functions
         [WebMethod]
-        public List<test> TestCase1Mongo(int num)
+        public Product TestCase1Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeById(id);
+            return product;
         }
 
         [WebMethod]
-        public List<test> TestCase2Mongo()
+        public Product TestCase2Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase3Mongo()
+        public Product TestCase3Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeAndCompanyById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase4Mongo()
+        public List<Product> TestCase4Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase5Mongo()
+        public List<Product> TestCase5Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase6Mongo()
+        public List<Product> TestCase6Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeAndCompanyById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase7Mongo()
+        public Product TestCase7Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase8Mongo()
+        public Product TestCase8Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase9Mongo()
+        public Product TestCase9Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeAndCompanyById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase10Mongo()
+        public List<Product> TestCase10Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase11Mongo()
+        public List<Product> TestCase11Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase12Mongo()
+        public List<Product> TestCase12Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeAndCompanyById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase13Mongo()
+        public Product TestCase13Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase14Mongo()
+        public Product TestCase14Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase15Mongo()
+        public Product TestCase15Mongo(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeAndCompanyById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase16Mongo()
+        public List<Product> TestCase16Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase17Mongo()
+        public List<Product> TestCase17Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase18Mongo()
+        public List<Product> TestCase18Mongo(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MongoHandler mongohandler = new MongoHandler();
+            var product = mongohandler.GetProductJoinProductTypeAndCompanyById(lower, upper);
+            return product;
         }
 
-        //MySql Funktioner. 
+        //MySql Functions
         [WebMethod]
-        public List<test> TestCase1MySql()
+        public Product TestCase1MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase2MySql()
+        public Product TestCase2MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase3MySql()
+        public Product TestCase3MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeAndCompanyById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase4MySql()
+        public List<Product> TestCase4MySql(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase5MySql()
+        public List<Product> TestCase5MySql(int lower,int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase6MySql()
+        public List<Product> TestCase6MySql(int lower,int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var products = sqlhander.GetProductJoinProductTypeAndCompanyById(lower, upper);
+            return products;
         }
         [WebMethod]
-        public List<test> TestCase7MySql()
+        public Product TestCase7MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase8MySql()
+        public Product TestCase8MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase9MySql()
+        public Product TestCase9MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeAndCompanyById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase10MySql()
+        public List<Product> TestCase10MySql(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase11MySql()
+        public List<Product> TestCase11MySql(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase12MySql()
+        public List<Product> TestCase12MySql(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var products = sqlhander.GetProductJoinProductTypeAndCompanyById(lower, upper);
+            return products;
         }
         [WebMethod]
-        public List<test> TestCase13MySql()
+        public Product TestCase13MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase14MySql()
+        public Product TestCase14MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase15MySql()
+        public Product TestCase15MySql(int id)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeAndCompanyById(id);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase16MySql()
+        public List<Product> TestCase16MySql(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductJoinProductTypeById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase17MySql()
+        public List<Product> TestCase17MySql(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var product = sqlhander.GetProductById(lower, upper);
+            return product;
         }
         [WebMethod]
-        public List<test> TestCase18MySql()
+        public List<Product> TestCase18MySql(int lower, int upper)
         {
-            return BachelorProjectBackend.SqlRepo.test.test1();
+            MySqlHandler sqlhander = new MySqlHandler();
+            var products = sqlhander.GetProductJoinProductTypeAndCompanyById(lower, upper);
+            return products;
         }
     }
 }
